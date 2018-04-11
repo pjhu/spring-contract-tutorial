@@ -70,3 +70,12 @@ publishing {
         }
     }
 }
+
+publishing {
+    publications {
+        stubs(MavenPublication) {
+            artifactId "${project.name}"
+            artifact verifierStubsJar
+        }
+    }
+}
