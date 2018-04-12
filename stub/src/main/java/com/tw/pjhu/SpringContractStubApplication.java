@@ -3,8 +3,6 @@ package com.tw.pjhu;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.contract.stubrunner.server.EnableStubRunnerServer;
-import org.springframework.cloud.contract.stubrunner.spring.AutoConfigureStubRunner;
-import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties;
 
 @EnableStubRunnerServer
 @SpringBootApplication

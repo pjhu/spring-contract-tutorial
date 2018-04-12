@@ -30,20 +30,3 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.springframework.cloud:spring-cloud-starter-contract-stub-runner:1.2.4.RELEASE")
 }
-
-publishing {
-    repositories {
-        maven {
-            url 'http://localhost:8081/repository/maven-snapshots/'
-            credentials {
-                username "admin"
-                password "admin123"
-            }
-        }
-    }
-    publications {
-        maven(MavenPublication) {
-            from components.java
-        }
-    }
-}
