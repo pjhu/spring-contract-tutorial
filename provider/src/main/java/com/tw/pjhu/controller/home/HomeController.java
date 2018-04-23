@@ -19,10 +19,10 @@ public class HomeController {
         return ResponseEntity.ok(user);
     }
 
-    @GetMapping("/new-api")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public ResponseEntity<UserResponse> newApi() {
-        UserResponse user = UserResponse.builder().name("new api").build();
-        return ResponseEntity.ok(user);
-    }
+//    @GetMapping("/new-api")
+//    @ResponseStatus(HttpStatus.ACCEPTED)
+//    public ResponseEntity<UserResponse> newApi() {
+//        UserResponse user = UserResponse.builder().name("new api").build();
+//        return ResponseEntity.ok(user);
+//    }
 }
