@@ -1,5 +1,5 @@
-# setup
-- setup nexus
+# setup nexus
+- start service
     ```
     docker-compose up -d
     ```
@@ -7,33 +7,34 @@
     ```
     localhost:8081
     ```
-# setup contract
-- setup producer
+# Contracts In Provider
+## setup contract
+- setup provider
     ```
-    cd producer
+    cd provider
     ./gradlew clean generateClientStubs
     ./gradlew publishStubsPublicationToMavenRepository
     ```
     
-- setup consumer
+- setup stub
     ```
-    cd consumer
+    cd stub
     ./gradlew bootRun
     ```
 - request
     ```
     curl localhost:8082/api/v1/home
     ```
-# run fat jar
+## run fat jar
     ```
     cd consumer
     ./gradlew bootJar
     java -jar build/libs/consumer-0.0.1-SNAPSHOT.jar
     ```
 
-# publishing consumer to nexus
+## publishing consumer to nexus
     ```
-    cd consumer
+    cd stub
     ./gradlew publishMavenPublicationToMavenRepository
     wget http://localhost:8001/.../consumer-0.0.1-SNAPSHOT.jar
     java -jar consumer-0.0.1-SNAPSHOT.jar
